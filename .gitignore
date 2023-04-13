@@ -3,6 +3,11 @@
 
 # Log file
 *.log
+tests_output/
+screens/
+logs/
+screenshots/
+videos/
 
 # BlueJ files
 *.ctxt
@@ -28,6 +33,7 @@ build/
 gradle/
 target/
 */target/
+node_modules/
 
 # IDE files
 *.iml
