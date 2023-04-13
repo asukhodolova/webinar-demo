@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Web UI Demo Suite">
+
+    <test name="Web UI Demo Test">
+        <classes>
+            <class name="com.zebrunner.demo.WebUITest"/>
+        </classes>
+    </test>
+
+</suite>
