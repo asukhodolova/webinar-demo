@@ -1,9 +1,9 @@
 describe('Cypress Google search', () => {
 
     const url = 'https://www.google.com/';
+    const searchValue = 'Zebrunner';
 
     it('Should return first result that contains search value', () => {
-        const searchValue = 'Zebrunner';
         cy.visit(url).contains('Google');
 
         console.log(`Performing Google search`);
@@ -14,7 +14,6 @@ describe('Cypress Google search', () => {
     });
 
     it('Should return first result that equals to search value', () => {
-        const searchValue = 'Cypress';
         cy.visit(url).contains('Google');
 
         console.log(`Performing Google search`);
