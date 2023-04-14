@@ -12,8 +12,5 @@
     "@wdio/spec-reporter": "^8.8.0",
     "chromedriver": "^112.0.0",
     "wdio-chromedriver-service": "^8.1.1"
-  },
-  "dependencies": {
-    "@zebrunner/javascript-agent-webdriverio": "^1.1.1"
   }
 }

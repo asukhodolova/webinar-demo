@@ -1,8 +1,3 @@
-const {
-    ZebrunnerReporter,
-    ZebrunnerService,
-} = require('@zebrunner/javascript-agent-webdriverio');
-
 exports.config = {
     specs: [
         './test/specs/**/*.js'
@@ -13,7 +8,7 @@ exports.config = {
 
     //----------------------- Selenium Grid configuration-----------------------
     protocol: 'https',
-    hostname: 'engine.zebrunner.dev',
+    hostname: 'localhost',
     port: 443,
     path: '/wd/hub',
     user: 'user',
@@ -37,26 +32,8 @@ exports.config = {
     connectionRetryCount: 3,
 
 
-    services: [[ZebrunnerService]],
+    services: [],
     reporters: [
-        [
-            //----------------------- Zebrunner Reporter configuration -----------------------
-            ZebrunnerReporter,
-            {
-                enabled: true,
-                projectKey: 'DEF',
-                server: {
-                    hostname: 'https://yourworkspace.zebrunner.com/',
-                    accessToken: 'yourtokenhere',
-                },
-                launch: {
-                    displayName: 'WDIO Demo',
-                    build: '2.41.2.2431-SNAPSHOT',
-                    environment: 'LOCAL',
-                },
-            },
-            //----------------------- Zebrunner Reporter configuration -----------------------
-        ],
         'spec',
     ],
 
