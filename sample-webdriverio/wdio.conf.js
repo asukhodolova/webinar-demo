@@ -13,11 +13,11 @@ exports.config = {
 
     //----------------------- Selenium Grid configuration-----------------------
     protocol: 'https',
-    hostname: 'engine.zebrunner.dev',
+    hostname: 'engine.zebrunner.com',
     port: 443,
     path: '/wd/hub',
-    user: 'user',
-    key: 'key',
+    user: 'webinar',
+    key: '5ktR24eatjJV2g1p',
 
     capabilities: [
         {
@@ -44,16 +44,23 @@ exports.config = {
             ZebrunnerReporter,
             {
                 enabled: true,
-                projectKey: 'DEF',
+                projectKey: 'DEMO',
                 server: {
-                    hostname: 'https://yourworkspace.zebrunner.com/',
-                    accessToken: 'yourtokenhere',
+                    hostname: 'https://webinar.zebrunner.com/',
+                    accessToken: 'wswcIxgTCIyXZ4H2nWfcIn2KEXcUjcDNUYalJn6Sd5L2ieN2Xg',
                 },
                 launch: {
-                    displayName: 'WDIO Demo',
+                    displayName: 'WDIO Demo with TCM integration',
                     build: '2.41.2.2431-SNAPSHOT',
                     environment: 'LOCAL',
                 },
+                tcm: {
+                    zebrunner: {
+                        pushResults: true,
+                        pushInRealTime: true,
+                        testRunId: 1
+                    }
+                }
             },
             //----------------------- Zebrunner Reporter configuration -----------------------
         ],

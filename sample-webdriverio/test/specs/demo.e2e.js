@@ -1,6 +1,6 @@
 const log = require('loglevel');
 const { Key } = require('webdriverio');
-const { currentTest } = require('@zebrunner/javascript-agent-webdriverio');
+const { currentTest, zebrunner } = require('@zebrunner/javascript-agent-webdriverio');
 
 describe('WDIO Google search', () => {
 
@@ -12,6 +12,8 @@ describe('WDIO Google search', () => {
   });
 
   it('Should return first result that contains search value', async () => {
+    zebrunner.testCaseKey('DEMO-1', 'DEMO-2');
+
     const searchValue = 'Zebrunner';
 
     logger.info(`Navigating to ${url}`);
@@ -30,6 +32,8 @@ describe('WDIO Google search', () => {
   });
 
   it('Should return first result that equals to search value', async () => {
+    zebrunner.testCaseKey('DEMO-3');
+
     const searchValue = 'Webdriver.io';
 
     logger.info(`Navigating to ${url}`);
