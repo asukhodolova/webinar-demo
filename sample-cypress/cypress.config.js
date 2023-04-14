@@ -2,6 +2,7 @@ const { defineConfig } = require('cypress');
 const zbrPlugin = require('@zebrunner/javascript-agent-cypress/lib/plugin');
 
 module.exports = defineConfig({
+  chromeWebSecurity: false,
   reporter: '@zebrunner/javascript-agent-cypress',
   reporterOptions: {
     reportingServerHostname: 'https://yourworkspace.zebrunner.com/',
