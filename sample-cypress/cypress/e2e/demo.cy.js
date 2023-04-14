@@ -1,4 +1,4 @@
-describe('Google search', () => {
+describe('Cypress Google search', () => {
 
     const url = 'https://www.google.com/';
 
