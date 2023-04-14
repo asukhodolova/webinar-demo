@@ -1,7 +1,6 @@
 package com.zebrunner.demo.pages.mobile;
 
 import com.zebrunner.demo.BasePage;
-import com.zebrunner.demo.utils.ScreenshotUtils;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
@@ -40,7 +39,6 @@ public class CatalogPage extends BasePage {
         }
         if (productIndex != -1) {
             productItems.get(productIndex).click();
-            ScreenshotUtils.takeScreenshot(driver);
             return new ProductDetailsPage(driver);
         }
         throw new RuntimeException("Product " + productName + " not found");

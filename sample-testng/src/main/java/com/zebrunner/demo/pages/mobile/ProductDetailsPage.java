@@ -1,7 +1,6 @@
 package com.zebrunner.demo.pages.mobile;
 
 import com.zebrunner.demo.BasePage;
-import com.zebrunner.demo.utils.ScreenshotUtils;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
@@ -32,7 +31,6 @@ public class ProductDetailsPage extends BasePage {
     public ProductDetailsPage clickAddToCartButton() {
         LOGGER.info("Clicking 'Add to cart' button");
         addToCartButton.click();
-        ScreenshotUtils.takeScreenshot(driver);
         return this;
     }
 

@@ -1,7 +1,6 @@
 package com.zebrunner.demo.pages.gui;
 
 import com.zebrunner.demo.BasePage;
-import com.zebrunner.demo.utils.ScreenshotUtils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -25,12 +24,10 @@ public class GoogleSearchPage extends BasePage {
     public GoogleSearchPage open() {
         LOGGER.info("Navigating to url: " + URL);
         driver.get(URL);
-        ScreenshotUtils.takeScreenshot(driver);
 
         if (driver.getPageSource().contains(COOKIES_DIALOG_TEXT)) {
             LOGGER.info("Cookies use popup is displayed, necessary to click 'Accept all'");
             acceptAllCookiesButton.click();
-            ScreenshotUtils.takeScreenshot(driver);
         }
         return new GoogleSearchPage(driver);
     }
@@ -39,7 +36,6 @@ public class GoogleSearchPage extends BasePage {
         LOGGER.info("Performing search with value: " + searchValue);
         searchInput.sendKeys(searchValue);
         searchInput.sendKeys(Keys.ENTER);
-        ScreenshotUtils.takeScreenshot(driver);
         return new GoogleSearchResultsPage(driver);
     }
 }
