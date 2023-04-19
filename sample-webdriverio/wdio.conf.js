@@ -47,7 +47,7 @@ exports.config = {
                 projectKey: 'DEMO',
                 server: {
                     hostname: 'https://webinar.zebrunner.com/',
-                    accessToken: 'wswcIxgTCIyXZ4H2nWfcIn2KEXcUjcDNUYalJn6Sd5L2ieN2Xg',
+                    accessToken: 'zs34JCuRcdn3ynwx3PY2rAHFkOknpcknlAgYWq9CNZcjtFtg7h',
                 },
                 launch: {
                     displayName: 'WDIO Demo with TCM integration',
