@@ -4,7 +4,6 @@ exports.config = {
     ],
 
     runner: 'local',
-    reporterSyncInterval: 60 * 1000,
 
     //----------------------- Selenium Grid configuration-----------------------
     protocol: 'https',
