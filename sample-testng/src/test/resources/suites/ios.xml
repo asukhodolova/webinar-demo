@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Mobile Demo Suite">
+
+    <test name="iOS Demo Test">
+        <parameter name="platformName" value="ios"></parameter>
+        <classes>
+            <class name="com.zebrunner.demo.MobileTest"/>
+        </classes>
+    </test>
+
+</suite>
