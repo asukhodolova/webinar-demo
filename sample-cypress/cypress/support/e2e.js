@@ -1,1 +1,5 @@
-import './commands'
+import './commands';
+
+before(() => {
+    cy.registerBrowser(Cypress.browser);
+  });
