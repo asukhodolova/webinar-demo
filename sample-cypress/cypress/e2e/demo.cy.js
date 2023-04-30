@@ -13,4 +13,14 @@ describe('Cypress Google search', () => {
         cy.xpath("//*[@id='search']//a").should('contain.text', searchValue);
     });
 
+    it('Should return first result that equals search value', () => {
+        cy.visit(url).contains('Google');
+
+        console.log(`Performing Google search`);
+        cy.xpath("//*[@name='q']").click().type(searchValue).type('{enter}');
+
+        console.log(`Verify first search result equals search value`);
+        cy.xpath("//*[@id='search']//a").should('have.text', searchValue);
+    });
+
 });
