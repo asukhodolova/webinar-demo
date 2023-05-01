@@ -22,7 +22,7 @@ public class MobileTest extends BaseTest {
                 case "ios":
                     capabilities.setPlatform(Platform.IOS);
                     capabilities.setCapability("appium:app", "https://github.com/saucelabs/my-demo-app-ios/releases/download/1.3.0/SauceLabs-Demo-App.Simulator.zip");
-                    //capabilities.setCapability("appium:deviceName", "iPhone 12 Pro");
+                    capabilities.setCapability("appium:deviceName", "iPhone 12 Pro Max");
                     capabilities.setCapability("appium:automationName", "XCUITest");
                     break;
                 case "android":
