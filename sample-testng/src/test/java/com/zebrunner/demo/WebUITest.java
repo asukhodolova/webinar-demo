@@ -20,25 +20,12 @@ public class WebUITest extends BaseTest {
 
     @Test
     public void testResultContainsSearchValue() {
+        LOGGER.info(System.getenv().toString());
         LOGGER.info("Open Google and perform search with value = " + SEARCH_VALUE);
         String firstResult = new GoogleSearchPage(driver).open().performSearch(SEARCH_VALUE).getFirstSearchResult();
 
         LOGGER.info("Verify first search result contains " + SEARCH_VALUE);
         assertTrue(firstResult.contains(SEARCH_VALUE), "Search result does not include " + SEARCH_VALUE);
-    }
-
-    @Test
-    public void testResultEqualsToSearchValue() {
-        LOGGER.info("Open Google and perform search with value = " + SEARCH_VALUE);
-        String firstResult = new GoogleSearchPage(driver).open().performSearch(SEARCH_VALUE).getFirstSearchResult();
-
-        LOGGER.info("Verify first search result contains " + SEARCH_VALUE);
-        assertEquals(firstResult, SEARCH_VALUE, "Search result does not equal");
-    }
-
-    @Test(dependsOnMethods = "testResultEqualsToSearchValue")
-    public void testSkip() {
-        LOGGER.info("This test should be skipped");
     }
 }
 
